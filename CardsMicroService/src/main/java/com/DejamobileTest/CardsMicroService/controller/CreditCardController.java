@@ -64,6 +64,18 @@ public class CreditCardController {
         return creditCardDao.deleteByNomAndPrenom(nom,prenom);
     }
 
+    @DeleteMapping (value = "/Cards")
+    public String deleteCreditCard(@RequestBody CreditCard creditCard) {
+        creditCardDao.delete(creditCard);
 
+        return "Carte de crédit supprimée !!!";
+    }
+
+    @PutMapping (value = "/Cards")
+    public String updateCard(@RequestBody CreditCard creditCard) {
+
+        creditCardDao.save(creditCard);
+        return "Carte de crédit modifiée !!!";
+    }
 
 }

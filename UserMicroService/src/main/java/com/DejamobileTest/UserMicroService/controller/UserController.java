@@ -59,4 +59,22 @@ public class UserController {
         return userDao.findByEmailAndPassword(email,password);
     }
 
+
+    @DeleteMapping (value = "/Users")
+    public String deleteUser(@RequestBody Users user) {
+        userDao.delete(user);
+
+        return "Utilisateur supprimé !!!";
+    }
+
+
+    @PutMapping (value = "/Users")
+    public String updateUser(@RequestBody Users user) {
+
+        userDao.save(user);
+        return "Utilisateur modifié !!!";
+
+
+    }
+
 }

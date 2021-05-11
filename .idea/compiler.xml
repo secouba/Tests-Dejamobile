@@ -8,15 +8,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CardsMicroService" />
         <module name="UserMicroService" />
+        <module name="BankBackendMicroService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="BankBackendMicroService" target="1.8" />
       <module name="CardsMicroService" target="1.8" />
       <module name="UserMicroService" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BankBackendMicroService" options="-parameters" />
       <module name="CardsMicroService" options="-parameters" />
       <module name="UserMicroService" options="-parameters" />
     </option>
