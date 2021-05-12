@@ -3,7 +3,7 @@ package com.DejamobileTest.BankBackendMicroService.model;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity(name = "Operations")
+@Entity
 public class BankBackend {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
