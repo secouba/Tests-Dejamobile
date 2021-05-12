@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 public class Users {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
     private String email;
     private String nom;

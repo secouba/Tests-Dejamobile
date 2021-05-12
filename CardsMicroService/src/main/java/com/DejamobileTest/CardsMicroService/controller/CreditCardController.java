@@ -30,6 +30,20 @@ public class CreditCardController {
         return creditCardDao.findById(id);
     }
 
+    //Card/Owner/{id}
+    @GetMapping(value = "Card/Owner/{id}")
+    public List<CreditCard> getUserCards(@PathVariable int id)
+    {
+        return creditCardDao.findByIdOwner(id);
+    }
+
+    //Card/Owner/Digitized/{id}/{digitalized}
+    @GetMapping(value = "Card/Owner/Digitized/{id}/{digitized}")
+    public List<CreditCard> getUserCardsDigitizedOrNot(@PathVariable int id, @PathVariable boolean digitized)
+    {
+        return creditCardDao.findByIdOwnerAndDigitized(id,false);
+    }
+
 
     @PostMapping(value = "/Cards")
     public ResponseEntity<Void> addCard(@RequestBody CreditCard creditCard)
