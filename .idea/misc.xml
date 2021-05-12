@@ -6,6 +6,8 @@
         <option value="$PROJECT_DIR$/UserMicroService/pom.xml" />
         <option value="$PROJECT_DIR$/CardsMicroService/pom.xml" />
         <option value="$PROJECT_DIR$/BankBackendMicroService/pom.xml" />
+        <option value="$PROJECT_DIR$/DejamobileSDKMicroService/pom.xml" />
+        <option value="$PROJECT_DIR$/DejamobileBackendMicroService/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,22 +1,21 @@
 package com.DejamobileTest.BankBackendMicroService.model;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 public class BankBackend {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     private int amount;
-    private Date date;
+    private String date;
     private int idCard;
     private int idUser;
 
     public BankBackend() {
     }
 
-    public BankBackend(int id, int amount, Date date, int idCard, int idUser) {
+    public BankBackend(int id, int amount, String date, int idCard, int idUser) {
         this.id = id;
         this.amount = amount;
         this.date = date;
@@ -40,11 +39,11 @@ public class BankBackend {
         this.amount = amount;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

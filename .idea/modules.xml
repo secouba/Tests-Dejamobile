@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BankBackendMicroService/BankBackendMicroService.iml" filepath="$PROJECT_DIR$/BankBackendMicroService/BankBackendMicroService.iml" />
       <module fileurl="file://$PROJECT_DIR$/CardsMicroService/CardsMicroService.iml" filepath="$PROJECT_DIR$/CardsMicroService/CardsMicroService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DejamobileBackendMicroService/DejamobileBackendMicroService.iml" filepath="$PROJECT_DIR$/DejamobileBackendMicroService/DejamobileBackendMicroService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DejamobileSDKMicroService/DejamobileSDKMicroService.iml" filepath="$PROJECT_DIR$/DejamobileSDKMicroService/DejamobileSDKMicroService.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/DejamobileTest.iml" filepath="$PROJECT_DIR$/.idea/DejamobileTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/UserMicroService/UserMicroService.iml" filepath="$PROJECT_DIR$/UserMicroService/UserMicroService.iml" />
     </modules>

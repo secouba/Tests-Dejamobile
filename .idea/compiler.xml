@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="DejamobileBackendMicroService" />
+        <module name="DejamobileSDKMicroService" />
         <module name="CardsMicroService" />
         <module name="UserMicroService" />
         <module name="BankBackendMicroService" />
@@ -14,6 +16,8 @@
     <bytecodeTargetLevel>
       <module name="BankBackendMicroService" target="1.8" />
       <module name="CardsMicroService" target="1.8" />
+      <module name="DejamobileBackendMicroService" target="1.8" />
+      <module name="DejamobileSDKMicroService" target="1.8" />
       <module name="UserMicroService" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -21,6 +25,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="BankBackendMicroService" options="-parameters" />
       <module name="CardsMicroService" options="-parameters" />
+      <module name="DejamobileBackendMicroService" options="-parameters" />
+      <module name="DejamobileSDKMicroService" options="-parameters" />
       <module name="UserMicroService" options="-parameters" />
     </option>
   </component>

@@ -4,9 +4,9 @@ import com.DejamobileTest.BankBackendMicroService.beans.CreditCardBean;
 import com.DejamobileTest.BankBackendMicroService.beans.UserBean;
 import com.DejamobileTest.BankBackendMicroService.dao.BankBackendDao;
 import com.DejamobileTest.BankBackendMicroService.proxies.CreditCardServiceProxy;
+import com.DejamobileTest.BankBackendMicroService.proxies.DejamobileBackendProxyBank;
 import com.DejamobileTest.BankBackendMicroService.proxies.UserServiceProxy;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,12 +15,16 @@ import java.util.List;
 @RestController
 public class BankBackendController {
 
-    @Autowired
-    BankBackendDao bankBackendDao;
+    //l'instantiation automatique du DAO de la banque ne marche pas. Cause inconnue encore ( peut-être à cause d'open feign ).
+    //@Autowired
+    //BankBackendDao bankBackendDao;
     @Autowired
     UserServiceProxy userServiceProxy;
     @Autowired
     CreditCardServiceProxy creditCardServiceProxy;
+    @Autowired
+    DejamobileBackendProxyBank dejamobileBackendProxyBank;
+
 
 
     //Users
@@ -138,10 +142,27 @@ public class BankBackendController {
     {
         return bankBackendDao.countByIdCard(id);
     }
-    */
 
+
+    @GetMapping(value = "Bank/Ops/Cards/Count/{id}")
+    public BankBackend countCards(@PathVariable int id)
+    {
+       return bankBackendDao.findById(id);
+    }
+
+     */
     //Fin Bank Backend
 
+
+
+    //DejamobileBackend
+    @GetMapping(value = "TestsDejamobile/Digitize")
+    public String getCardDitized()
+    {
+        return dejamobileBackendProxyBank.getCardDitized();
+    }
+
+    //Fin DejamobileBackend
 
 
 
